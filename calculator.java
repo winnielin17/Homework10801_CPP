@@ -1,79 +1,44 @@
-/*(1)©m¶W°G™L®ÿº¸
-     æ«∏π°G110816003*/
-/*(2)∞ı¶ÊÆ…∑|≈„•‹§p∫‚ΩL™∫µ¯µ°°C
-     ´ˆ§U%¡‰°A§U±∆º∆¶r∑|∞£•H100°C
-     ´ˆ§UCE¡‰°A§U±∆º∆¶r∑|≥Q≤M∞£°C
-     ´ˆ§UC¡‰°A§W§U±∆º∆¶r¨“∑|≥Q≤M∞£°C
-     ´ˆ§U°ˆ¡‰°A§U±∆™∫≥Ã´·§@≠”º∆¶r∑|≥Q≤M∞£°C
-     ´ˆ§U1/x¡‰°A§U±∆™∫º∆¶r∑|≈‹¶®≠Àº∆°C
-     ´ˆ§Ux^2¡‰°A§U±∆™∫º∆¶r∑|•≠§Ë°C
-     ´ˆ§U°‘x¡‰°A§U±∆™∫º∆¶r∑|∂}Æ⁄∏π°C
-     ´ˆ§U°“¡‰°A§W±∆πB∫‚¶°∑|∂i¶Ê∞£™kπB∫‚°C
-     ´ˆ§U7¡‰°A§U±∆º∆¶r∑|∑sºW7°C
-     ´ˆ§U8¡‰°A§U±∆º∆¶r∑|∑sºW8°C
-     ´ˆ§U9¡‰°A§U±∆º∆¶r∑|∑sºW9°C
-     ´ˆ§U°—¡‰°A§W±∆πB∫‚¶°∑|∂i¶Ê≠º™kπB∫‚°C
-     ´ˆ§U4¡‰°A§U±∆º∆¶r∑|∑sºW4°C
-     ´ˆ§U5¡‰°A§U±∆º∆¶r∑|∑sºW5°C
-     ´ˆ§U6¡‰°A§U±∆º∆¶r∑|∑sºW6°C
-     ´ˆ§U-¡‰°A§W±∆πB∫‚¶°∑|∂i¶Ê¥Ó™kπB∫‚°C
-     ´ˆ§U1¡‰°A§U±∆º∆¶r∑|∑sºW1°C
-     ´ˆ§U2¡‰°A§U±∆º∆¶r∑|∑sºW2°C
-     ´ˆ§U3¡‰°A§U±∆º∆¶r∑|∑sºW3°C
-     ´ˆ§U+¡‰°A§W±∆πB∫‚¶°∑|∂i¶Ê•[™kπB∫‚°C
-     ´ˆ§U°”¡‰°A§U±∆™∫º∆¶r∑|≈‹¶®≠Ï•ª™∫≠tº∆°C
-     ´ˆ§U0¡‰°A§U±∆º∆¶r∑|∑sºW0°C
-     ´ˆ§U.¡‰°A§U±∆º∆¶r∑|∑sºW.°C
-     ´ˆ§U=¡‰°A§W±∆πB∫‚¶°∑|∂i¶ÊπB∫‚°A§U±∆º∆¶r≈„•‹µ≤™G°C
-     ´ˆ§U√ˆ≥¨´·∑|∂}±“πÔ∏‹§Ë∂Ù°A∏ﬂ∞›¨Oß_ΩT©w≠n√ˆ≥¨°A
-     ´ˆ§UΩT©w´·¥N∑|¬˜∂}µ{¶°°A´ˆ§U®˙Æ¯´h¶^®Ï≠Ï®”§p∫‚ΩL™∫µ¯µ°°C*/
-/*(3)1.µ{¶°¶≥∑N∏q•B•i•H∞ı¶Ê
-     2.∂»§‰¥©æ„º∆πB∫‚
-     3.§‰¥©§pº∆πB∫‚
-     4.•]ßt©“¶≥•\Ø‡
-     ¶€µ˚°G95*/
-/*(5)ºW•[ΩT©w¨Oß_≠n√ˆ≥¨™∫•\Ø‡°C*/
 import java.awt.*;
 import java.awt.event.*;
-public class H7_110816003 extends Frame implements ActionListener,WindowListener
+public class calculator extends Frame implements ActionListener, WindowListener
 {
-    static H7_110816003 frm=new H7_110816003();
-    static Panel pnl=new Panel(new GridLayout(6,4,2,2));
-    static Label lab1=new Label("",Label.RIGHT);
-    static Label lab2=new Label("0",Label.RIGHT);
-    static Button btnpc=new Button("%");
-    static Button btnce=new Button("CE");
-    static Button btnc=new Button("C");
-    static Button btnbc=new Button("°ˆ");
-    static Button btnre=new Button("1/x");
-    static Button btnsq=new Button("x^2");
-    static Button btnsqrt=new Button("°‘x");
-    static Button btndi=new Button("°“");
-    static Button btn7=new Button("7");
-    static Button btn8=new Button("8");
-    static Button btn9=new Button("9");
-    static Button btnmu=new Button("°—");
-    static Button btn4=new Button("4");
-    static Button btn5=new Button("5");
-    static Button btn6=new Button("6");
-    static Button btnmi=new Button("-");
-    static Button btn1=new Button("1");
-    static Button btn2=new Button("2");
-    static Button btn3=new Button("3");
-    static Button btnpl=new Button("+");
-    static Button btnplmi=new Button("°”");
-    static Button btn0=new Button("0");
-    static Button btndot=new Button(".");
-    static Button btneq=new Button("=");
-    StringBuffer s1=new StringBuffer();
-    StringBuffer s2=new StringBuffer();
-    double num1=0,num2=0;
-    int oper=0;
+    static calculator frm = new calculator();
+    static Panel pnl = new Panel(new GridLayout(6,4,2,2));
+    static Label lab1 = new Label("",Label.RIGHT);
+    static Label lab2 = new Label("0",Label.RIGHT);
+    static Button btnpc = new Button("%");
+    static Button btnce = new Button("CE");
+    static Button btnc = new Button("C");
+    static Button btnbc = new Button("X");
+    static Button btnre = new Button("1/x");
+    static Button btnsq = new Button("x^2");
+    static Button btnsqrt = new Button("‚àöx");
+    static Button btndi = new Button("√∑");
+    static Button btn7 = new Button("7");
+    static Button btn8 = new Button("8");
+    static Button btn9 = new Button("9");
+    static Button btnmu = new Button("√ó");
+    static Button btn4 = new Button("4");
+    static Button btn5 = new Button("5");
+    static Button btn6 = new Button("6");
+    static Button btnmi = new Button("-");
+    static Button btn1 = new Button("1");
+    static Button btn2 = new Button("2");
+    static Button btn3 = new Button("3");
+    static Button btnpl = new Button("+");
+    static Button btnplmi = new Button("¬±");
+    static Button btn0 = new Button("0");
+    static Button btndot = new Button(".");
+    static Button btneq = new Button("=");
+    StringBuffer s1 = new StringBuffer();
+    StringBuffer s2 = new StringBuffer();
+    double num1 = 0, num2 = 0;
+    int oper = 0;
 
-    static Dialog dlg=new Dialog(frm);
-    static Label lab3=new Label("Ω–∞›ΩT©w≠n√ˆ≥¨µ¯µ°?");
-    static Button sure=new Button("ΩT©w");
-    static Button cancel=new Button("®˙Æ¯");
+    static Dialog dlg = new Dialog(frm);
+    static Label lab3 = new Label("Are you sure you want to exit?");
+    static Button sure = new Button("Yes");
+    static Button cancel = new Button("No");
 
     public static void main(String args[])
     {
@@ -107,7 +72,7 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
         frm.addWindowListener(frm);
 
         frm.setLayout(null);
-        frm.setTitle("§p∫‚ΩL");
+        frm.setTitle("Â∞èÁÆóÁõ§");
         frm.setSize(500,550);
         frm.setLocation(100,50);
         frm.setResizable(false);
@@ -169,8 +134,8 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
         frm.add(lab2);
         frm.add(pnl);
 
-        dlg.setTitle("√ˆ≥¨µ¯µ°");
-        dlg.setSize(250,180);
+        dlg.setTitle("ÈóúÈñâË¶ñÁ™ó");
+        dlg.setSize(300,180);
         dlg.setLocation(400,120);
         dlg.setLayout(new FlowLayout(FlowLayout.CENTER,15,25));
         lab3.setFont(new Font("",Font.PLAIN,20));
@@ -185,21 +150,21 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
 
     public void actionPerformed(ActionEvent e)
     {
-        Object btn=e.getSource();
-        if(btn==btnpl) //•[∏π
+        Object btn = e.getSource();
+        if(btn == btnpl) //Âä†Ëôü
         {
-            if(oper==1) //´e§@≠”¨O•[∏π
+            if(oper == 1) //Ââç‰∏ÄÂÄãÊòØÂä†Ëôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
                 }
                 else
                 {
-                    num1=num1+num2;
+                    num1 = num1 + num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -208,25 +173,25 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=1;
+                    num2 = 0d;
+                    oper = 1;
                 }
             }
-            else if(oper==2) //´e§@≠”¨O¥Ó∏π
+            else if(oper == 2) //Ââç‰∏ÄÂÄãÊòØÊ∏õËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=1;
+                    oper = 1;
                 }
                 else
                 {
-                    num1=num1-num2;
+                    num1 = num1 - num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -235,25 +200,25 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=1;
+                    num2 = 0d;
+                    oper = 1;
                 }
             }
-            else if(oper==3) //´e§@≠”¨O≠º∏π
+            else if(oper == 3) //Ââç‰∏ÄÂÄãÊòØ‰πòËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=1;
+                    oper = 1;
                 }
                 else
                 {
-                    num1=num1*num2;
+                    num1 = num1 * num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -262,34 +227,34 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=1;
+                    num2 = 0d;
+                    oper = 1;
                 }
             }
-            else if(oper==4) //´e§@≠”¨O∞£∏π
+            else if(oper == 4) //Ââç‰∏ÄÂÄãÊòØÈô§Ëôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=1;
+                    oper = 1;
                 }
                 else
                 {
                     if(s2.toString().equals("0"))
                     {
-                        lab2.setText("µL™k∞£•H0");
+                        lab2.setText("ÁÑ°Ê≥ïÈô§‰ª•0");
                         s1.append(s2.toString());
                         lab1.setText(s1.append(e.getActionCommand()).toString());
-                        oper=0;
+                        oper = 0;
                     }
                     else
                     {
-                        num1=num1/num2;
+                        num1 = num1 / num2;
                         s1.append(lab2.getText());
                         lab1.setText(s1.append(e.getActionCommand()).toString());
-                        int num=(int)num1;
-                        if(num1==num)
+                        int num = (int)num1;
+                        if(num1 == num)
                         {
                             lab2.setText(Integer.toString(num));
                         }
@@ -298,38 +263,38 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                             lab2.setText(Double.toString(num1));
                         }
                         s2.setLength(0);
-                        num2=0d;
-                        oper=1;
+                        num2 = 0d;
+                        oper = 1;
                     }
                 }
             }
             else
             {
-                num1=Double.parseDouble(lab2.getText());
+                num1 = Double.parseDouble(lab2.getText());
                 s1.append(lab2.getText());
                 lab1.setText(s1.append(e.getActionCommand()).toString());
                 s2.setLength(0);
-                num2=0d;
-                oper=1;
+                num2 = 0d;
+                oper = 1;
             }
         }
-        else if(btn==btnmi) //¥Ó∏π
+        else if(btn == btnmi) //Ê∏õËôü
         {
-            if(oper==1) //´e§@≠”¨O•[∏π
+            if(oper == 1) //Ââç‰∏ÄÂÄãÊòØÂä†Ëôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=2;
+                    oper = 2;
                 }
                 else
                 {
-                    num1=num1+num2;
+                    num1 = num1 + num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -338,22 +303,22 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=2;
+                    num2 = 0d;
+                    oper = 2;
                 }
             }
-            else if(oper==2) //´e§@≠”¨O¥Ó∏π
+            else if(oper == 2) //Ââç‰∏ÄÂÄãÊòØÊ∏õËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
                 }
                 else
                 {
-                    num1=num1-num2;
+                    num1 = num1 - num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -362,25 +327,25 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=2;
+                    num2 = 0d;
+                    oper = 2;
                 }
             }
-            else if(oper==3) //´e§@≠”¨O≠º∏π
+            else if(oper == 3) //Ââç‰∏ÄÂÄãÊòØ‰πòËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=2;
+                    oper = 2;
                 }
                 else
                 {
-                    num1=num1*num2;
+                    num1 = num1 * num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -389,34 +354,34 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=2;
+                    num2 = 0d;
+                    oper = 2;
                 }
             }
-            else if(oper==4) //´e§@≠”¨O∞£∏π
+            else if(oper == 4) //Ââç‰∏ÄÂÄãÊòØÈô§Ëôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=2;
+                    oper = 2;
                 }
                 else
                 {
                     if(s2.toString().equals("0"))
                     {
-                        lab2.setText("µL™k∞£•H0");
+                        lab2.setText("ÁÑ°Ê≥ïÈô§‰ª•0");
                         s1.append(s2.toString());
                         lab1.setText(s1.append(e.getActionCommand()).toString());
                         oper=0;
                     }
                     else
                     {
-                        num1=num1/num2;
+                        num1 = num1 / num2;
                         s1.append(lab2.getText());
                         lab1.setText(s1.append(e.getActionCommand()).toString());
-                        int num=(int)num1;
-                        if(num1==num)
+                        int num = (int)num1;
+                        if(num1 == num)
                         {
                             lab2.setText(Integer.toString(num));
                         }
@@ -425,38 +390,38 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                             lab2.setText(Double.toString(num1));
                         }
                         s2.setLength(0);
-                        num2=0d;
-                        oper=2;
+                        num2 = 0d;
+                        oper = 2;
                     }
                 }
             }
             else
             {
-                num1=Double.parseDouble(lab2.getText());
+                num1 = Double.parseDouble(lab2.getText());
                 s1.append(lab2.getText());
                 lab1.setText(s1.append(e.getActionCommand()).toString());
                 s2.setLength(0);
-                num2=0d;
-                oper=2;
+                num2 = 0d;
+                oper = 2;
             }
         }
-        else if(btn==btnmu) //≠º∏π
+        else if(btn == btnmu) //‰πòËôü
         {
-            if(oper==1) //´e§@≠”¨O•[∏π
+            if(oper == 1) //Ââç‰∏ÄÂÄãÊòØÂä†Ëôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
                     s1.deleteCharAt(s1.length()-1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=3;
+                    oper = 3;
                 }
                 else
                 {
-                    num1=num1+num2;
+                    num1 = num1 + num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -465,25 +430,25 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=3;
+                    num2 = 0d;
+                    oper = 3;
                 }
             }
-            else if(oper==2) //´e§@≠”¨O¥Ó∏π
+            else if(oper == 2) //Ââç‰∏ÄÂÄãÊòØÊ∏õËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=3;
+                    oper = 3;
                 }
                 else
                 {
-                    num1=num1-num2;
+                    num1 = num1 - num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -492,22 +457,22 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=3;
+                    num2 = 0d;
+                    oper = 3;
                 }
             }
-            else if(oper==3) //´e§@≠”¨O≠º∏π
+            else if(oper == 3) //Ââç‰∏ÄÂÄãÊòØ‰πòËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
                 }
                 else
                 {
-                    num1=num1*num2;
+                    num1 = num1 * num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -516,34 +481,34 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=3;
+                    num2 = 0d;
+                    oper = 3;
                 }
             }
-            else if(oper==4) //´e§@≠”¨O∞£∏π
+            else if(oper == 4) //Ââç‰∏ÄÂÄãÊòØÈô§Ëôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
                     s1.deleteCharAt(s1.length()-1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=3;
+                    oper = 3;
                 }
                 else
                 {
                     if(s2.toString().equals("0"))
                     {
-                        lab2.setText("µL™k∞£•H0");
+                        lab2.setText("ÁÑ°Ê≥ïÈô§‰ª•0");
                         s1.append(s2.toString());
                         lab1.setText(s1.append(e.getActionCommand()).toString());
-                        oper=0;
+                        oper = 0;
                     }
                     else
                     {
-                        num1=num1/num2;
+                        num1 = num1 / num2;
                         s1.append(lab2.getText());
                         lab1.setText(s1.append(e.getActionCommand()).toString());
-                        int num=(int)num1;
-                        if(num1==num)
+                        int num = (int)num1;
+                        if(num1 == num)
                         {
                             lab2.setText(Integer.toString(num));
                         }
@@ -552,38 +517,38 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                             lab2.setText(Double.toString(num1));
                         }
                         s2.setLength(0);
-                        num2=0d;
-                        oper=3;
+                        num2 = 0d;
+                        oper = 3;
                     }
                 }
             }
             else
             {
-                num1=Double.parseDouble(lab2.getText());
+                num1 = Double.parseDouble(lab2.getText());
                 s1.append(lab2.getText());
                 lab1.setText(s1.append(e.getActionCommand()).toString());
                 s2.setLength(0);
-                num2=0d;
-                oper=3;
+                num2 = 0d;
+                oper = 3;
             }
         }
-        else if(btn==btndi) //∞£∏π
+        else if(btn ==btndi) //Èô§Ëôü
         {
-            if(oper==1) //´e§@≠”¨O•[∏π
+            if(oper == 1) //Ââç‰∏ÄÂÄãÊòØÂä†Ëôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=4;
+                    oper = 4;
                 }
                 else
                 {
-                    num1=num1+num2;
+                    num1 = num1 + num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -592,25 +557,25 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=4;
+                    num2 = 0d;
+                    oper = 4;
                 }
             }
-            else if(oper==2) //´e§@≠”¨O¥Ó∏π
+            else if(oper == 2) //Ââç‰∏ÄÂÄãÊòØÊ∏õËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=4;
+                    oper = 4;
                 }
                 else
                 {
-                    num1=num1-num2;
+                    num1 = num1 - num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -619,25 +584,25 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=4;
+                    num2 = 0d;
+                    oper = 4;
                 }
             }
-            else if(oper==3) //´e§@≠”¨O≠º∏π
+            else if(oper == 3) //Ââç‰∏ÄÂÄãÊòØ‰πòËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    s1.deleteCharAt(s1.length()-1);
+                    s1.deleteCharAt(s1.length() - 1);
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    oper=4;
+                    oper = 4;
                 }
                 else
                 {
-                    num1=num1*num2;
+                    num1 = num1 * num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -646,31 +611,31 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=4;
+                    num2 = 0d;
+                    oper = 4;
                 }
             }
-            else if(oper==4) //´e§@≠”¨O∞£∏π
+            else if(oper == 4) //Ââç‰∏ÄÂÄãÊòØÈô§Ëôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
                 }
                 else
                 {
                     if(s2.toString().equals("0"))
                     {
-                        lab2.setText("µL™k∞£•H0");
+                        lab2.setText("ÁÑ°Ê≥ïÈô§‰ª•0");
                         s1.append(s2.toString());
                         lab1.setText(s1.append(e.getActionCommand()).toString());
-                        oper=0;
+                        oper = 0;
                     }
                     else
                     {
-                        num1=num1/num2;
+                        num1 = num1 / num2;
                         s1.append(lab2.getText());
                         lab1.setText(s1.append(e.getActionCommand()).toString());
-                        int num=(int)num1;
-                        if(num1==num)
+                        int num = (int)num1;
+                        if(num1 == num)
                         {
                             lab2.setText(Integer.toString(num));
                         }
@@ -679,34 +644,34 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                             lab2.setText(Double.toString(num1));
                         }
                         s2.setLength(0);
-                        num2=0d;
-                        oper=4;
+                        num2 = 0d;
+                        oper = 4;
                     }
                 }
             }
             else
             {
-                num1=Double.parseDouble(lab2.getText());
+                num1 = Double.parseDouble(lab2.getText());
                 s1.append(lab2.getText());
                 lab1.setText(s1.append(e.getActionCommand()).toString());
                 s2.setLength(0);
-                num2=0d;
-                oper=4;
+                num2 = 0d;
+                oper = 4;
             }
         }
-        else if(btn==btneq) //µ•∏π
+        else if(btn == btneq) //Á≠âËôü
         {
-            if(oper==1) //•[∏π
+            if(oper == 1) //Âä†Ëôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    num2=num1;
+                    num2 = num1;
                 }
-                num1=num1+num2;
+                num1 = num1 + num2;
                 s1.append(lab2.getText());
                 lab1.setText(s1.append(e.getActionCommand()).toString());
-                int num=(int)num1;
-                if(num1==num)
+                int num = (int)num1;
+                if(num1 == num)
                 {
                     lab2.setText(Integer.toString(num));
                 }
@@ -715,20 +680,20 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     lab2.setText(Double.toString(num1));
                 }
                 s2.setLength(0);
-                num2=0d;
-                oper=0;
+                num2 = 0d;
+                oper = 0;
             }
-            else if(oper==2) //¥Ó∏π
+            else if(oper == 2) //Ê∏õËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    num2=num1;
+                    num2 = num1;
                 }
-                num1=num1-num2;
+                num1 = num1 - num2;
                 s1.append(lab2.getText());
                 lab1.setText(s1.append(e.getActionCommand()).toString());
-                int num=(int)num1;
-                if(num1==num)
+                int num = (int)num1;
+                if(num1 == num)
                 {
                     lab2.setText(Integer.toString(num));
                 }
@@ -737,20 +702,20 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     lab2.setText(Double.toString(num1));
                 }
                 s2.setLength(0);
-                num2=0d;
-                oper=0;
+                num2 = 0d;
+                oper = 0;
             }
-            else if(oper==3) //≠º∏π
+            else if(oper == 3) //‰πòËôü
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
-                    num2=num1;
+                    num2 = num1;
                 }
-                num1=num1*num2;
+                num1 = num1 * num2;
                 s1.append(lab2.getText());
                 lab1.setText(s1.append(e.getActionCommand()).toString());
-                int num=(int)num1;
-                if(num1==num)
+                int num = (int)num1;
+                if(num1 == num)
                 {
                     lab2.setText(Integer.toString(num));
                 }
@@ -759,27 +724,27 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     lab2.setText(Double.toString(num1));
                 }
                 s2.setLength(0);
-                num2=0d;
-                oper=0;
+                num2 = 0d;
+                oper = 0;
             }
-            else if(oper==4) //∞£∏π
+            else if(oper == 4) //Èô§Ëôü
             {
-                if(num1==0)
+                if(num1 == 0)
                 {
-                    lab2.setText("•º©w∏qµ≤™G");
-                    oper=0;
+                    lab2.setText("Êú™ÂÆöÁæ©ÁµêÊûú");
+                    oper = 0;
                 }
                 else
                 {
-                    if(s2.length()==0)
+                    if(s2.length() == 0)
                     {
-                        num2=num1;
+                        num2 = num1;
                     }
-                    num1=num1/num2;
+                    num1 = num1 / num2;
                     s1.append(lab2.getText());
                     lab1.setText(s1.append(e.getActionCommand()).toString());
-                    int num=(int)num1;
-                    if(num1==num)
+                    int num = (int)num1;
+                    if(num1 == num)
                     {
                         lab2.setText(Integer.toString(num));
                     }
@@ -788,8 +753,8 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                         lab2.setText(Double.toString(num1));
                     }
                     s2.setLength(0);
-                    num2=0d;
-                    oper=0;
+                    num2 = 0d;
+                    oper = 0;
                 }
             }
             else
@@ -797,8 +762,8 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                 num1=Double.parseDouble(lab2.getText());
                 s1.append(lab2.getText());
                 lab1.setText(s1.append(e.getActionCommand()).toString());
-                int num=(int)num1;
-                if(num1==num)
+                int num = (int)num1;
+                if(num1 == num)
                 {
                     lab2.setText(Integer.toString(num));
                 }
@@ -807,37 +772,37 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     lab2.setText(Double.toString(num1));
                 }
                 s2.setLength(0);
-                num2=0d;
-                oper=0;
+                num2 = 0d;
+                oper = 0;
             }
         }
-        else if(btn==btndot) //§pº∆¬I
+        else if(btn == btndot) //Â∞èÊï∏Èªû
         {
-            if(lab2.getText().indexOf('.')!=-1) //§w∏g¶≥§pº∆¬I
+            if(lab2.getText().indexOf('.') != -1) //Â∑≤Á∂ìÊúâÂ∞èÊï∏Èªû
             {
             }
             else
             {
-                if(s2.length()==0)
+                if(s2.length() == 0)
                 {
                     s2.append("0");
                 }
                 lab2.setText(s2.append(e.getActionCommand()).toString());
             }
         }
-        else if(btn==btnplmi) //•ø≠t∏π
+        else if(btn == btnplmi) //Ê≠£Ë≤†Ëôü
         {
-            num2=-num2;
+            num2 = -num2;
             s2.setLength(0);
-            if(lab2.getText().indexOf('.')!=-1) //§w∏g¶≥§pº∆¬I
+            if(lab2.getText().indexOf('.')!= -1) //Â∑≤Á∂ìÊúâÂ∞èÊï∏Èªû
             {
                 s2.append(Double.toString(num2));
                 lab2.setText(s2.toString());
             }
             else
             {
-                int num=(int)num2;
-                if(num2==num)
+                int num = (int)num2;
+                if(num2 == num)
                 {
                     s2.append(Integer.toString(num));
                     lab2.setText(s2.toString());
@@ -849,12 +814,12 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                 }
             }
         }
-        else if(btn==btnpc) //¶ §¿§Ò
+        else if(btn == btnpc) //ÁôæÂàÜÊØî
         {
-            num2=num2/100;
+            num2 = num2 / 100;
             s2.setLength(0);
-            int num=(int)num2;
-            if(num2==num)
+            int num = (int)num2;
+            if(num2 == num)
             {
                 s2.append(Integer.toString(num));
                 lab2.setText(s2.toString());
@@ -865,92 +830,92 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                 lab2.setText(s2.toString());
             }
         }
-        else if(btn==btnce) //CE
+        else if(btn == btnce) //CE
         {
-            if(lab2.getText().equals("µL™k∞£•H0"))
+            if(lab2.getText().equals("ÁÑ°Ê≥ïÈô§‰ª•0"))
             {
                 s2.setLength(0);
                 lab2.setText(s2.append("0").toString());
                 lab2.setAlignment(Label.RIGHT);
-                num2=0d;
+                num2 = 0d;
                 s1.setLength(0);
                 lab1.setText(s1.toString());
-                oper=0;
+                oper = 0;
             }
-            else if(s1.toString().length()>0)
+            else if(s1.toString().length() > 0)
             {
-                if(s1.toString().substring(s1.length()-1).equals("="))
+                if(s1.toString().substring(s1.length() - 1).equals("="))
                 {
                     s1.setLength(0);
                     lab1.setText(s1.toString());
                 }
-                else if(lab2.getText().equals("•º©w∏qµ≤™G"))
+                else if(lab2.getText().equals("Êú™ÂÆöÁæ©ÁµêÊûú"))
                 {
                     s1.setLength(0);
                     lab1.setText(s1.toString());
                 }
-                else if(lab2.getText().equals("µLÆƒ™∫øÈ§J"))
+                else if(lab2.getText().equals("ÁÑ°ÊïàÁöÑËº∏ÂÖ•"))
                 {
                     s1.setLength(0);
                     lab1.setText(s1.toString());
                 }
                 s2.setLength(0);
                 lab2.setText(s2.append("0").toString());
-                num2=0d;
-                oper=0;
+                num2 = 0d;
+                oper = 0;
             }
             else
             {
                 s2.setLength(0);
                 lab2.setText(s2.append("0").toString());
-                num2=0d;
-                oper=0;
+                num2 = 0d;
+                oper = 0;
             }
         }
-        else if(btn==btnc) //C
+        else if(btn == btnc) //C
         {
             s2.setLength(0);
             lab2.setText(s2.append("0").toString());
             lab2.setAlignment(Label.RIGHT);
-            num2=0d;
+            num2 = 0d;
             s1.setLength(0);
             lab1.setText(s1.toString());
-            num1=0d;
-            oper=0;
+            num1 = 0d;
+            oper = 0;
         }
-        else if(btn==btnbc) //Backspace
+        else if(btn == btnbc) //Backspace
         {
             if(lab2.getText().equals("0"))
             {
             }
-            else if(lab2.getText().length()==1)
+            else if(lab2.getText().length() == 1)
             {
                 s2.setLength(0);
                 lab2.setText(s2.append("0").toString());
-                num2=0d;
+                num2 = 0d;
             }
-            else if(lab2.getText().length()>1)
+            else if(lab2.getText().length() > 1)
             {
-                s2.deleteCharAt(s2.length()-1);
+                s2.deleteCharAt(s2.length() - 1);
                 lab2.setText(s2.toString());
                 num2=Double.parseDouble(lab2.getText());
             }
         }
-        else if(btn==btnre) //≠Àº∆
+        else if(btn == btnre) //ÂÄíÊï∏
         {
             if(lab2.getText().equals("0"))
             {
-                lab2.setText("µL™k∞£•H0");
+                lab2.setText("ÁÑ°Ê≥ïÈô§‰ª•0");
                 s1.append("1/(0)");
                 lab1.setText(s1.toString());
                 s2.setLength(0);
-                num2=0d;
-                oper=0;
+                num2 = 0d;
+                oper = 0;
             }
-            else if(oper==0)
+            else if(oper == 0)
             {
-                int num=(int)num2;
-                if(num2==num)
+                int num = (int)num2;
+                if(num2 == num)
                 {
                     s1.append("1/("+num+")");
                     lab1.setText(s1.toString());
@@ -960,10 +925,10 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     s1.append("1/("+num2+")");
                     lab1.setText(s1.toString());
                 }
-                num2=1/num2;
+                num2 = 1 / num2;
                 s2.setLength(0);
-                num=(int)num2;
-                if(num2==num)
+                num = (int)num2;
+                if(num2 == num)
                 {
                     s2.append(Integer.toString(num));
                     lab2.setText(s2.toString());
@@ -973,12 +938,12 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     s2.append(Double.toString(num2));
                     lab2.setText(s2.toString());
                 }
-                num1=num2;
+                num1 = num2;
             }
             else
             {
-                int num=(int)num2;
-                if(num2==num)
+                int num = (int)num2;
+                if(num2 == num)
                 {
                     s1.append("1/("+num+")");
                     lab1.setText(s1.toString());
@@ -988,10 +953,10 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     s1.append("1/("+num2+")");
                     lab1.setText(s1.toString());
                 }
-                num2=1/num2;
+                num2 = 1 / num2;
                 s2.setLength(0);
-                num=(int)num2;
-                if(num2==num)
+                num = (int)num2;
+                if(num2 == num)
                 {
                     s2.append(Integer.toString(num));
                     lab2.setText(s2.toString());
@@ -1003,12 +968,12 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                 }
             }
         }
-        else if(btn==btnsq) //•≠§Ë
+        else if(btn == btnsq) //Âπ≥Êñπ
         {
-            if(oper==0)
+            if(oper == 0)
             {
-                int num=(int)num2;
-                if(num2==num)
+                int num = (int)num2;
+                if(num2 == num)
                 {
                     s1.append("sqr("+num+")");
                     lab1.setText(s1.toString());
@@ -1018,10 +983,10 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     s1.append("sqr("+num2+")");
                     lab1.setText(s1.toString());
                 }
-                num2=num2*num2;
+                num2 = num2 * num2;
                 s2.setLength(0);
-                num=(int)num2;
-                if(num2==num)
+                num = (int)num2;
+                if(num2 == num)
                 {
                     s2.append(Integer.toString(num));
                     lab2.setText(s2.toString());
@@ -1031,12 +996,12 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     s2.append(Double.toString(num2));
                     lab2.setText(s2.toString());
                 }
-                num1=num2;
+                num1 = num2;
             }
             else
             {
-                int num=(int)num2;
-                if(num2==num)
+                int num = (int)num2;
+                if(num2 == num)
                 {
                     s1.append("sqr("+num+")");
                     lab1.setText(s1.toString());
@@ -1046,10 +1011,10 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     s1.append("sqr("+num2+")");
                     lab1.setText(s1.toString());
                 }
-                num2=num2*num2;
+                num2 = num2 * num2;
                 s2.setLength(0);
-                num=(int)num2;
-                if(num2==num)
+                num = (int)num2;
+                if(num2 == num)
                 {
                     s2.append(Integer.toString(num));
                     lab2.setText(s2.toString());
@@ -1061,43 +1026,43 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                 }
             }
         }
-        else if(btn==btnsqrt) //•≠§ËÆ⁄
+        else if(btn == btnsqrt) //Âπ≥ÊñπÊ†π
         {
-            if(num2<0)
+            if(num2 < 0)
             {
-                lab2.setText("µLÆƒ™∫øÈ§J");
-                int num=(int)num2;
-                if(num2==num)
+                lab2.setText("ÁÑ°ÊïàÁöÑËº∏ÂÖ•");
+                int num = (int)num2;
+                if(num2 == num)
                 {
-                    s1.append("°‘("+num+")");
+                    s1.append("‚àö("+num+")");
                     lab1.setText(s1.toString());
                 }
                 else
                 {
-                    s1.append("°‘("+num2+")");
+                    s1.append("‚àö("+num2+")");
                     lab1.setText(s1.toString());
                 }
                 s2.setLength(0);
-                num2=0d;
-                oper=0;
+                num2 = 0d;
+                oper = 0;
             }
-            else if(oper==0)
+            else if(oper == 0)
             {
-                int num=(int)num2;
-                if(num2==num)
+                int num = (int)num2;
+                if(num2 == num)
                 {
-                    s1.append("°‘("+num+")");
+                    s1.append("‚àö("+num+")");
                     lab1.setText(s1.toString());
                 }
                 else
                 {
-                    s1.append("°‘("+num2+")");
+                    s1.append("‚àö("+num2+")");
                     lab1.setText(s1.toString());
                 }
-                num2=Math.sqrt(num2);
+                num2 = Math.sqrt(num2);
                 s2.setLength(0);
-                num=(int)num2;
-                if(num2==num)
+                num = (int)num2;
+                if(num2 == num)
                 {
                     s2.append(Integer.toString(num));
                     lab2.setText(s2.toString());
@@ -1107,25 +1072,25 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                     s2.append(Double.toString(num2));
                     lab2.setText(s2.toString());
                 }
-                num1=num2;
+                num1 = num2;
             }
             else
             {
-                int num=(int)num2;
-                if(num2==num)
+                int num = (int)num2;
+                if(num2 == num)
                 {
-                    s1.append("°‘("+num+")");
+                    s1.append("‚àö("+num+")");
                     lab1.setText(s1.toString());
                 }
                 else
                 {
-                    s1.append("°‘("+num2+")");
+                    s1.append("‚àö("+num2+")");
                     lab1.setText(s1.toString());
                 }
-                num2=Math.sqrt(num2);
+                num2 = Math.sqrt(num2);
                 s2.setLength(0);
-                num=(int)num2;
-                if(num2==num)
+                num = (int)num2;
+                if(num2 == num)
                 {
                     s2.append(Integer.toString(num));
                     lab2.setText(s2.toString());
@@ -1137,36 +1102,36 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                 }
             }
         }
-        else if(btn==btn0) //º∆¶r0
+        else if(btn == btn0) //Êï∏Â≠ó0
         {
-            if(lab2.getText().equals("µL™k∞£•H0"))
+            if(lab2.getText().equals("ÁÑ°Ê≥ïÈô§‰ª•0"))
             {
                 s2.setLength(0);
                 lab2.setText(s2.append(e.getActionCommand()).toString());
                 lab2.setAlignment(Label.RIGHT);
-                num2=Double.parseDouble(lab2.getText());
+                num2 = Double.parseDouble(lab2.getText());
                 s1.setLength(0);
                 lab1.setText(s1.toString());
             }
             else if(lab2.getText().equals("0"))
             {
-                num2=Double.parseDouble(lab2.getText());
+                num2 = Double.parseDouble(lab2.getText());
             }
             else
             {
-                if(s1.toString().length()>0)
+                if(s1.toString().length() > 0)
                 {
-                    if(s1.toString().substring(s1.length()-1).equals("="))
+                    if(s1.toString().substring(s1.length() - 1).equals("="))
                     {
                         s1.setLength(0);
                         lab1.setText(s1.toString());
                     }
-                    else if(lab2.getText().equals("•º©w∏qµ≤™G"))
+                    else if(lab2.getText().equals("Êú™ÂÆöÁæ©ÁµêÊûú"))
                     {
                         s1.setLength(0);
                         lab1.setText(s1.toString());
                     }
-                    else if(lab2.getText().equals("µLÆƒ™∫øÈ§J"))
+                    else if(lab2.getText().equals("ÁÑ°ÊïàÁöÑËº∏ÂÖ•"))
                     {
                         s1.setLength(0);
                         lab1.setText(s1.toString());
@@ -1174,27 +1139,27 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                 }
                 lab2.setText(s2.append(e.getActionCommand()).toString());
                 lab2.setAlignment(Label.RIGHT);
-                num2=Double.parseDouble(lab2.getText());
+                num2 = Double.parseDouble(lab2.getText());
             }
         }
-        else //®‰•Lº∆¶r°BΩTª{°B®˙Æ¯
+        else //ÂÖ∂‰ªñÊï∏Â≠ó„ÄÅÁ¢∫Ë™ç„ÄÅÂèñÊ∂à
         {
-            if(btn==sure)
+            if(btn == sure)
             {
                 dlg.dispose();
                 frm.dispose();
                 System.exit(0);
             }
-            else if(btn==cancel)
+            else if(btn == cancel)
             {
                 dlg.hide();
             }
-            else if(lab2.getText().equals("µL™k∞£•H0"))
+            else if(lab2.getText().equals("ÁÑ°Ê≥ïÈô§‰ª•0"))
             {
                 s2.setLength(0);
                 lab2.setText(s2.append(e.getActionCommand()).toString());
                 lab2.setAlignment(Label.RIGHT);
-                num2=Double.parseDouble(lab2.getText());
+                num2 = Double.parseDouble(lab2.getText());
                 s1.setLength(0);
                 lab1.setText(s1.toString());
             }
@@ -1204,19 +1169,19 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                 {
                     s2.setLength(0);
                 }
-                else if(s1.toString().length()>0)
+                else if(s1.toString().length() > 0)
                 {
-                    if(s1.toString().substring(s1.length()-1).equals("="))
+                    if(s1.toString().substring(s1.length() - 1).equals("="))
                     {
                         s1.setLength(0);
                         lab1.setText(s1.toString());
                     }
-                    else if(lab2.getText().equals("•º©w∏qµ≤™G"))
+                    else if(lab2.getText().equals("Êú™ÂÆöÁæ©ÁµêÊûú"))
                     {
                         s1.setLength(0);
                         lab1.setText(s1.toString());
                     }
-                    else if(lab2.getText().equals("µLÆƒ™∫øÈ§J"))
+                    else if(lab2.getText().equals("ÁÑ°ÊïàÁöÑËº∏ÂÖ•"))
                     {
                         s1.setLength(0);
                         lab1.setText(s1.toString());
@@ -1224,7 +1189,7 @@ public class H7_110816003 extends Frame implements ActionListener,WindowListener
                 }
                 lab2.setText(s2.append(e.getActionCommand()).toString());
                 lab2.setAlignment(Label.RIGHT);
-                num2=Double.parseDouble(lab2.getText());
+                num2 = Double.parseDouble(lab2.getText());
             }
         }
     }

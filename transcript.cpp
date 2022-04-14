@@ -11,10 +11,10 @@ class Stnode
 		char name[21];
 		int math;
 	public:
-		Stnode() { no=0; math=0; }
+		Stnode() { no = 0; math = 0; }
 		void writeno(int t)
 		{
-			no=t;
+			no = t;
 		}
 		int readno()
 		{
@@ -30,7 +30,7 @@ class Stnode
 		}
 		void writemath(int t)
 		{
-			math=t;
+			math = t;
 		}
 		int readmath()
 		{
@@ -48,7 +48,7 @@ class CS : public Stnode
 	public:
 		void writecs(int t)
 		{
-			cs=t;
+			cs = t;
 		}
 		int readcs()
 		{
@@ -56,7 +56,7 @@ class CS : public Stnode
 		}
 		void writeoo(int t)
 		{
-			oo=t;
+			oo = t;
 		}
 		int readoo()
 		{
@@ -64,7 +64,7 @@ class CS : public Stnode
 		}
 		void writecptr(CS *t)
 		{
-			cptr=t;
+			cptr = t;
 		}
 		CS *readcptr()
 		{
@@ -72,7 +72,7 @@ class CS : public Stnode
 		}
 		void writetotal(int t)
 		{
-			total=t;
+			total = t;
 		}
 		int readtotal()
 		{
@@ -97,33 +97,25 @@ class MENU
 
 int main()
 {
-	CS *cq;
-	CS *chead;
-	CS *cf;
-	CS *cp;
-	CS ct[50];
-	CS a[50];
+	CS *chead, *cq, *cf, *cp;
+	CS ct[50], a[50];
 	int tno;
 	char tname[21];
-	int tmath;
-	int tcs;
-	int too;
-	int tpe;
-	int ttotal;
+	int tmath, tcs, too, ttotal;
 	MENU m;
-	int n,k,x,ccounter=0;
-	chead=NULL;
+	int n, k, x, ccounter = 0;
+	chead = NULL;
 	ifstream ci("student.txt", ios_base::in);
-	if (ci)
+	if(ci)
 	{
-		while (ci>>tno&&!ci.eof())
+		while(ci>>tno && !ci.eof())
 		{
-			if (chead==NULL)
+			if(chead == NULL)
 			{
-				chead=new CS;
+				chead = new CS;
 				chead->writeno(tno);
 				ci.get();
-				ci.getline(tname,20);
+				ci.getline(tname, 20);
 				chead->writename(tname);
 				ci>>tmath;
 				chead->writemath(tmath);
@@ -132,13 +124,13 @@ int main()
 				ci>>too;
 				chead->writeoo(too);
 				chead->writecptr(NULL);
-				ttotal=chead->readmath()+chead->readcs()+chead->readoo();
+				ttotal = chead->readmath() + chead->readcs() + chead->readoo();
 				chead->writetotal(ttotal);
-				ccounter=ccounter+1;
+				ccounter = ccounter + 1;
 			}
 			else
 			{
-				cq=new CS;
+				cq = new CS;
 				cq->writeno(tno);
 				ci.get();
 				ci.getline(tname,20);
@@ -149,45 +141,45 @@ int main()
 				cq->writecs(tcs);
 				ci>>too;
 				cq->writeoo(too);
-				cf=NULL;
-				cp=chead;
-				while (cp!=NULL)
+				cf = NULL;
+				cp = chead;
+				while(cp != NULL)
 				{
-					cf=cp; //f跑到p的位置 
-					cp=cp->readcptr(); //p跑到下一個 
+					cf = cp; //f跑到p的位置 
+					cp = cp->readcptr(); //p跑到下一個 
 				}
 				cf->writecptr(cq);
 				cq->writecptr(cp);
-				ttotal=cq->readmath()+cq->readcs()+cq->readoo();
+				ttotal = cq->readmath() + cq->readcs() + cq->readoo();
 				cq->writetotal(ttotal);
-				ccounter=ccounter+1;
+				ccounter = ccounter + 1;
 			}
 			ci.get();
 		}
 	}
 	ci.close();
-	while (true)
+	while(true)
 	{
 		m.menu();
 		cin>>n;
 		cout<<endl;
-		if (n<1||n>6)
+		if(n < 1 || n > 6)
 		{
 			cout<<"輸入錯誤!!"<<endl;
 			cout<<"請重新選擇"<<endl;
 			cout<<endl;
 		}
-		int t=1;
-		if (n==1)
+		int t = 1;
+		if(n == 1)
 		{
 			cout<<"新增學生資料執行中"<<endl;
 			cout<<endl;
-			if (chead==NULL)
+			if(chead == NULL)
 			{
-				chead=new CS;
+				chead = new CS;
 				cout<<"請輸入學生座號:";
 				cin>>tno;
-				while (tno<=0)
+				while(tno <= 0)
 				{
 					cout<<"輸入的座號要>0!!"<<endl;
 					cout<<"請重新輸入:";
@@ -200,7 +192,7 @@ int main()
 				chead->writename(tname);
 				cout<<"請輸入學生數學成績:";
 				cin>>tmath;
-				while (tmath<0||tmath>100)
+				while(tmath < 0 || tmath > 100)
 				{
 					cout<<"輸入的成績要在0~100之間!!"<<endl;
 					cout<<"請重新輸入:";
@@ -209,7 +201,7 @@ int main()
 				chead->writemath(tmath);
 				cout<<"請輸入學生計概成績:";
 				cin>>tcs;
-				while (tcs<0||tcs>100)
+				while(tcs < 0 || tcs > 100)
 				{
 					cout<<"輸入的成績要在0~100之間!!"<<endl;
 					cout<<"請重新輸入:";
@@ -218,7 +210,7 @@ int main()
 				chead->writecs(tcs);
 				cout<<"請輸入學生物件導向成績:";
 				cin>>too;
-				while (too<0||too>100)
+				while(too < 0 || too > 100)
 				{
 					cout<<"輸入的成績要在0~100之間!!"<<endl;
 					cout<<"請重新輸入:";
@@ -226,17 +218,17 @@ int main()
 				}
 				chead->writeoo(too);
 				chead->writecptr(NULL);
-				ttotal=chead->readmath()+chead->readcs()+chead->readoo();
+				ttotal = chead->readmath() + chead->readcs() + chead->readoo();
 				chead->writetotal(ttotal);
-				ccounter=ccounter+1;
+				ccounter = ccounter + 1;
 				cout<<endl;
 			}
 			else
 			{
-				cq=new CS;
+				cq = new CS;
 				cout<<"請輸入學生座號:";
 				cin>>tno;
-				while (tno<=0)
+				while(tno <= 0)
 				{
 					cout<<"輸入的座號要>0!!"<<endl;
 					cout<<"請重新輸入:";
@@ -249,7 +241,7 @@ int main()
 				cq->writename(tname);
 				cout<<"請輸入學生數學成績:";
 				cin>>tmath;
-				while (tmath<0||tmath>100)
+				while(tmath < 0 || tmath > 100)
 				{
 					cout<<"輸入的成績要在0~100之間!!"<<endl;
 					cout<<"請重新輸入:";
@@ -258,7 +250,7 @@ int main()
 				cq->writemath(tmath);
 				cout<<"請輸入學生計概成績:";
 				cin>>tcs;
-				while (tcs<0||tcs>100)
+				while(tcs < 0 || tcs > 100)
 				{
 					cout<<"輸入的成績要在0~100之間!!"<<endl;
 					cout<<"請重新輸入:";
@@ -267,7 +259,7 @@ int main()
 				cq->writecs(tcs);
 				cout<<"請輸入學生物件導向成績:";
 				cin>>too;
-				while (too<0||too>100)
+				while(too < 0 || too > 100)
 				{
 					cout<<"輸入的成績要在0~100之間!!"<<endl;
 					cout<<"請重新輸入:";
@@ -275,11 +267,11 @@ int main()
 				}
 				cq->writeoo(too);
 				cout<<endl;
-				cf=NULL;
-				cp=chead;
-				while (cp!=NULL&&cp->readno()<=cq->readno())
+				cf = NULL;
+				cp = chead;
+				while(cp != NULL && cp->readno() <= cq->readno())
 				{
-					if (cp->readno()==cq->readno())
+					if(cp->readno() == cq->readno())
 					{
 						cout<<"輸入的座號已經存在!!"<<endl;
 						cout<<"請重新選擇"<<endl;
@@ -287,32 +279,32 @@ int main()
 						cout<<endl;
 						break;
 					}
-					cf=cp; //f跑到p的位置 
-					cp=cp->readcptr(); //p跑到下一個 
+					cf = cp; //f跑到p的位置 
+					cp = cp->readcptr(); //p跑到下一個 
 				}
-				if (t==1)
+				if(t == 1)
 				{
-					if (cf==NULL) //q最小  
+					if(cf == NULL) //q最小  
 					{
 						cq->writecptr(chead);
-						chead=cq;
+						chead = cq;
 					}
 					else //q在中間或最大
 					{
 						cf->writecptr(cq);
 						cq->writecptr(cp);
 					}
-					ttotal=cq->readmath()+cq->readcs()+cq->readoo();
+					ttotal = cq->readmath() + cq->readcs() + cq->readoo();
 					cq->writetotal(ttotal);
-					ccounter=ccounter+1; 
+					ccounter = ccounter + 1; 
 				}
 			}
 		}
-		if (n==2)
+		if(n == 2)
 		{
 			cout<<"查詢學生資料執行中"<<endl;
 			cout<<endl;
-			if (chead==NULL)
+			if(chead == NULL)
 			{
 				cout<<"沒有資料可供查詢!!"<<endl;
 				cout<<"請重新選擇"<<endl;
@@ -323,14 +315,14 @@ int main()
 				cout<<"請輸入要查詢的學生座號:";
 				cin>>x;
 				cout<<endl;
-				cf=NULL;
-				cp=chead;
-				while (cp!=NULL&&cp->readno()!=x) //沒有符合的話會跳到最後一個 
+				cf = NULL;
+				cp = chead;
+				while(cp != NULL && cp->readno() != x) //沒有符合的話會跳到最後一個 
 				{
-					cf=cp; //f跑到p的位置 
-					cp=cp->readcptr(); //p跑到下一個 
+					cf = cp; //f跑到p的位置 
+					cp = cp->readcptr(); //p跑到下一個 
 				}
-				if (cp==NULL)
+				if(cp == NULL)
 				{
 					cout<<"該筆資料不存在，無法查詢"<<endl;
 					cout<<"請重新選擇"<<endl;
@@ -347,11 +339,11 @@ int main()
 				}
 			}
 		}
-		if (n==3)
+		if(n == 3)
 		{
 			cout<<"修改學生資料執行中"<<endl;
 			cout<<endl;
-			if (chead==NULL)
+			if(chead == NULL)
 			{
 				cout<<"沒有資料可供修改!!"<<endl;
 				cout<<"請重新選擇"<<endl;
@@ -362,14 +354,14 @@ int main()
 				cout<<"請輸入要修改的學生座號:";
 				cin>>x;
 				cout<<endl;
-				cf=NULL;
-				cp=chead;
-				while (cp!=NULL&&cp->readno()!=x) //沒有符合的話會跳到最後一個 
+				cf = NULL;
+				cp = chead;
+				while(cp != NULL && cp->readno() != x) //沒有符合的話會跳到最後一個 
 				{
-					cf=cp; //f跑到p的位置 
-					cp=cp->readcptr(); //p跑到下一個 
+					cf = cp; //f跑到p的位置 
+					cp = cp->readcptr(); //p跑到下一個 
 				}
-				if (cp==NULL)
+				if(cp == NULL)
 				{
 					cout<<"該筆資料不存在，無法修改"<<endl;
 					cout<<"請重新選擇"<<endl;
@@ -383,7 +375,7 @@ int main()
 					cp->writename(tname);
 					cout<<"請輸入學生數學成績:";
 					cin>>tmath;
-					while (tmath<0||tmath>100)
+					while(tmath < 0 || tmath > 100)
 					{
 						cout<<"輸入的成績要在0~100之間!!"<<endl;
 						cout<<"請重新輸入:";
@@ -392,7 +384,7 @@ int main()
 					cp->writemath(tmath);
 					cout<<"請輸入學生計概成績:";
 					cin>>tcs;
-					while (tcs<0||tcs>100)
+					while(tcs < 0 || tcs > 100)
 					{
 						cout<<"輸入的成績要在0~100之間!!"<<endl;
 						cout<<"請重新輸入:";
@@ -401,24 +393,24 @@ int main()
 					cp->writecs(tcs);
 					cout<<"請輸入學生物件導向成績:";
 					cin>>too;
-					while (too<0||too>100)
+					while(too < 0 || too > 100)
 					{
 						cout<<"輸入的成績要在0~100之間!!"<<endl;
 						cout<<"請重新輸入:";
 						cin>>too;
 					}
 					cp->writeoo(too);
-					ttotal=cp->readmath()+cp->readcs()+cp->readoo();
+					ttotal = cp->readmath() + cp->readcs() + cp->readoo();
 					cp->writetotal(ttotal);
 					cout<<endl;
 				}
 			}
 		}
-		if (n==4)
+		if(n == 4)
 		{
 			cout<<"刪除學生資料執行中"<<endl;
 			cout<<endl;
-			if (chead==NULL)
+			if (chead == NULL)
 			{
 				cout<<"沒有資料可供刪除!!"<<endl;
 				cout<<"請重新選擇"<<endl;
@@ -429,40 +421,40 @@ int main()
 				cout<<"請輸入要刪除的學生座號:";
 				cin>>x;
 				cout<<endl;
-				cf=NULL;
-				cp=chead;
-				while (cp!=NULL&&cp->readno()!=x) //沒有符合的話會跳到最後一個 
+				cf = NULL;
+				cp = chead;
+				while(cp != NULL && cp->readno() != x) //沒有符合的話會跳到最後一個 
 				{
-					cf=cp; //f跑到p的位置 
-					cp=cp->readcptr(); //p跑到下一個 
+					cf = cp; //f跑到p的位置 
+					cp = cp->readcptr(); //p跑到下一個 
 				}
-				if (cp==NULL)
+				if(cp == NULL)
 				{
 					cout<<"該筆資料不存在，無法刪除"<<endl;
 					cout<<"請重新選擇"<<endl;
 					cout<<endl; 
 				}
-				else if (x==chead->readno())
+				else if(x == chead->readno())
 				{
 					chead=chead->readcptr(); //刪掉第一個 
 					cout<<"該筆資料已刪除"<<endl;
-					ccounter=ccounter-1;
+					ccounter = ccounter - 1;
 					cout<<endl;
 				}
 				else
 				{
 					cf->writecptr(cp->readcptr()); //刪掉中間或最大的 
 					cout<<"該筆資料已刪除"<<endl;
-					ccounter=ccounter-1; 
+					ccounter = ccounter - 1; 
 					cout<<endl;
 				}
 			}
 		}
-		if (n==5)
+		if(n == 5)
 		{
 			cout<<"列印成績單執行中"<<endl;
 			cout<<endl;
-			if (chead==NULL)
+			if(chead == NULL)
 			{
 				cout<<"沒有資料可供列印!!"<<endl;
 				cout<<"請重新選擇"<<endl;
@@ -470,24 +462,24 @@ int main()
 			}
 			else
 			{
-				cp=chead;
-				while (cp!=0)
+				cp = chead;
+				while(cp != 0)
 				{
-					for (int i=0;i<ccounter;i++)
+					for(int i = 0; i < ccounter; i++)
 					{
-						ct[i]=*cp;
-						cp=cp->readcptr();
+						ct[i] = *cp;
+						cp = cp->readcptr();
 					}
 				}
-				for (int i=0;i<ccounter-1;i++)
+				for(int i = 0; i < ccounter-1; i++)
 				{
-					for (int j=0;j<ccounter-1;j++)
+					for(int j = 0; j < ccounter-1; j++)
 					{
-						if (ct[j].readtotal()<ct[j+1].readtotal())
+						if(ct[j].readtotal() < ct[j+1].readtotal())
 						{
-							a[j]=ct[j];
-							ct[j]=ct[j+1];
-							ct[j+1]=a[j];
+							a[j] = ct[j];
+							ct[j] = ct[j+1];
+							ct[j+1] = a[j];
 						}
 					}
 				}
@@ -497,7 +489,7 @@ int main()
 				cout<<setw(12)<<"計概成績";
 				cout<<setw(16)<<"物件導向成績";
 				cout<<setw(8)<<"總分"<<endl;
-				for (int i=0;i<ccounter;i++)
+				for(int i = 0; i < ccounter; i++)
 				{
 					cout<<setw(4)<<ct[i].readno()<<"\t";
 					cout<<left<<setw(22)<<ct[i].readname();
@@ -509,15 +501,15 @@ int main()
 				cout<<endl;
 			}
 		}
-		if (n==6)
+		if(n == 6)
 		{
 			cout<<"謝謝使用~";
 			break;
 		}
 	}
-	cp=chead;
+	cp = chead;
 	ofstream co("student.txt", ios_base::out);
-	while (cp!=0)
+	while(cp != 0)
 	{
 		co<<cp->readno()<<endl;
 		co<<cp->readname()<<endl;
