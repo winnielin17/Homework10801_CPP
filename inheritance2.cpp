@@ -51,7 +51,6 @@ class CS : public Stnode
 		int cs;
 		int oo;
 		CS *cptr;
-		int total;
 	public:
 		void writecs(int t)
 		{
@@ -77,14 +76,6 @@ class CS : public Stnode
 		{
 			return cptr;
 		}
-		void writetotal(int t)
-		{
-			total = t;
-		}
-		int readtotal()
-		{
-			return total;
-		}
 };
 
 class PE : public Stnode
@@ -92,7 +83,6 @@ class PE : public Stnode
 	private:
 		int pe;
 		PE *pptr;
-		int total;
 	public:
 		void writepe(int t)
 		{
@@ -110,14 +100,6 @@ class PE : public Stnode
 		{
 			return pptr;
 		}
-		void writetotal(int t)
-		{
-			total = t;
-		}
-		int readtotal()
-		{
-			return total;
-		}
 };
 
 class MENU
@@ -128,8 +110,7 @@ class MENU
 			cout<<"(1).新增學生資料"<<endl;
 			cout<<"(2).刪除學生資料"<<endl;
 			cout<<"(3).列印串列資料"<<endl;
-			cout<<"(4).列印成績單"<<endl;
-			cout<<"(5).離開"<<endl; 
+			cout<<"(4).離開"<<endl; 
 			cout<<"請輸入選擇項目: ";
 		}
 };
@@ -137,14 +118,12 @@ class MENU
 int main()
 {
 	CS *chead, *cq, *cf, *cp;
-	CS ct[50], a[50];
 	PE *phead, *pq, *pf, *pp;
-	PE pt[50], b[50];
 	int tno;
 	char tname[21];
-	int tmath, tcs, too, tpe, ttotal;
+	int tmath, tcs, too, tpe;
 	MENU m;
-	int n, k, x, ccounter = 0, pcounter = 0;
+	int n, k, x;
 	chead = NULL;
 	phead = NULL;
 	while(true)
@@ -152,7 +131,7 @@ int main()
 		m.menu();
 		cin>>n;
 		cout<<endl;
-		if(n < 1 || n > 5)
+		if(n < 1 || n > 4)
 		{
 			cout<<"輸入錯誤!!"<<endl;
 			cout<<"請重新選擇"<<endl;
@@ -221,9 +200,6 @@ int main()
 					}
 					chead->writeoo(too);
 					chead->writecptr(NULL);
-					ttotal = chead->readmath() + chead->readcs() + chead->readoo();
-					chead->writetotal(ttotal);
-					ccounter = ccounter + 1;
 					cout<<endl;
 				}
 				else
@@ -298,9 +274,6 @@ int main()
 							cq->writecptr(cp);
 						}
 					}
-					ttotal = cq->readmath() + cq->readcs() + cq->readoo();
-					cq->writetotal(ttotal);
-					ccounter = ccounter + 1;
 				}
 			}
 			if(k == 2)
@@ -340,15 +313,12 @@ int main()
 					}
 					phead->writepe(tpe);
 					phead->writepptr(NULL);
-					ttotal = phead->readmath() + phead->readpe();
-					phead->writetotal(ttotal);
-					pcounter = pcounter + 1;
 					cout<<endl;
 				}
 				else
 				{
 					pq = new PE;
-					cout<<"請輸入學生座號:";
+					cout<<"請輸入學生座號: ";
 					cin>>tno;
 					while(tno <= 0)
 					{
@@ -408,9 +378,6 @@ int main()
 							pq->writepptr(pp);
 						}
 					}
-					ttotal = pq->readmath() + pq->readpe();
-					pq->writetotal(ttotal);
-					pcounter = pcounter + 1;
 				}
 			}
 		}
@@ -460,14 +427,12 @@ int main()
 					{
 						chead = chead->readcptr(); //刪掉第一個 
 						cout<<"該筆資料已刪除"<<endl;
-						ccounter = ccounter - 1;
 						cout<<endl;
 					}
 					else
 					{
 						cf->writecptr(cp->readcptr()); //刪掉中間或最大的 
-						cout<<"該筆資料已刪除"<<endl;
-						ccounter = ccounter - 1; 
+						cout<<"該筆資料已刪除"<<endl; 
 						cout<<endl;
 					}
 				}
@@ -502,14 +467,12 @@ int main()
 					{
 						phead = phead->readpptr(); //刪掉第一個 
 						cout<<"該筆資料已刪除"<<endl;
-						pcounter = pcounter - 1;
 						cout<<endl;
 					}
 					else
 					{
 						pf->writepptr(pp->readpptr()); //刪掉中間或最大的 
-						cout<<"該筆資料已刪除"<<endl;
-						pcounter = pcounter - 1; 
+						cout<<"該筆資料已刪除"<<endl; 
 						cout<<endl;
 					}
 				}
@@ -573,119 +536,6 @@ int main()
 			}
 		}
 		if(n == 4)
-		{
-			cout<<"列印成績單執行中"<<endl;
-			cout<<endl;
-			cout<<"請問要列印資科系還是體育系學生成績單?"<<endl;
-			cout<<"資科系請選1"<<endl;
-			cout<<"體育系請選2"<<endl;
-			cout<<"請輸入選擇項目: ";
-			cin>>k;
-			cout<<endl;
-			while(k < 1 || k > 2)
-			{
-				cout<<"輸入錯誤!!"<<endl;
-				cout<<"請重新選擇: ";
-				cin>>k;
-			}
-			if(k == 1)
-			{
-				if(chead == NULL)
-				{
-					cout<<"沒有資料可供列印!!"<<endl;
-					cout<<"請重新選擇"<<endl;
-					cout<<endl;
-				}
-				else
-				{
-					cp = chead;
-					while(cp != 0)
-					{
-						for(int i = 0; i < ccounter; i++)
-						{
-							ct[i] = *cp;
-							cp = cp->readcptr();
-						}
-					}
-					for(int i = 0; i < ccounter-1; i++)
-					{
-						for(int j = 0; j < ccounter-1; j++)
-						{
-							if (ct[j].readtotal() < ct[j+1].readtotal())
-							{
-								a[j] = ct[j];
-								ct[j] = ct[j+1];
-								ct[j+1] = a[j];
-							}
-						}
-					}
-					cout<<"座號\t";
-					cout<<"姓名\t\t";
-					cout<<"數學成績\t";
-					cout<<"計概成績\t";
-					cout<<"物件導向成績\t";
-					cout<<"總分"<<endl;
-					for(int i = 0; i < ccounter; i++)
-					{
-						cout<<ct[i].readno()<<"\t";
-						cout<<ct[i].readname()<<"\t\t";
-						cout<<ct[i].readmath()<<"\t\t";
-						cout<<ct[i].readcs()<<"\t\t";
-						cout<<ct[i].readoo()<<"\t\t";
-						cout<<ct[i].readtotal()<<endl;
-					}
-					cout<<endl;
-				}
-			}
-			if(k == 2)
-			{
-				if(phead == NULL)
-				{
-					cout<<"沒有資料可供列印!!"<<endl;
-					cout<<"請重新選擇"<<endl;
-					cout<<endl;
-				}
-				else
-				{
-					pp = phead;
-					while(pp != 0)
-					{
-						for(int i = 0; i < pcounter; i++)
-						{
-							pt[i] = *pp;
-							pp = pp->readpptr();
-						}
-					}
-					for(int i = 0; i < pcounter-1; i++)
-					{
-						for(int j = 0; j < pcounter-1; j++)
-						{
-							if (pt[j].readtotal() < pt[j+1].readtotal())
-							{
-								b[j] = pt[j];
-								pt[j] = pt[j+1];
-								pt[j+1] = b[j];
-							}
-						}
-					}
-					cout<<"座號\t";
-					cout<<"姓名\t\t";
-					cout<<"數學成績\t";
-					cout<<"體育成績\t";
-					cout<<"總分"<<endl;
-					for(int i = 0; i < pcounter; i++)
-					{
-						cout<<pt[i].readno()<<"\t";
-						cout<<pt[i].readname()<<"\t\t";
-						cout<<pt[i].readmath()<<"\t\t";
-						cout<<pt[i].readpe()<<"\t\t";
-						cout<<pt[i].readtotal()<<endl;
-					}
-					cout<<endl;
-				}
-			}
-		}
-		if(n == 5)
 		{
 			cout<<"謝謝使用~";
 			break;
