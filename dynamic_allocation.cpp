@@ -24,7 +24,7 @@ int main()
 	for(int i = 0; i < 5; i++)
 	{
 		cout<<"Please input student's number: ";
-		cin>>(p+i)->no; //*((p+i)).no
+		cin>>(p+i)->no; //(*(p+i)).no
 		cout<<"Please input student's gender(M/F): ";
 		cin>>(p+i)->gen; //(*(p+i)).gen
 		cout<<"Please input student's marriage(0/1): ";
